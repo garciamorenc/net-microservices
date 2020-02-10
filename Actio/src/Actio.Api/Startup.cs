@@ -34,7 +34,6 @@ namespace Actio.Api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 
