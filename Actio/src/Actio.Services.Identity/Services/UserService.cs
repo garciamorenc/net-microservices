@@ -20,7 +20,7 @@ namespace Actio.Services.Identity.Services
         public async Task RegisterAsync(string email, string password, string name)
         {
             var user = await this._userRepository.GetAsync(email);
-            if (user == null)
+            if (user != null)
                 throw new ActioException("email_in_use", 
                     $"Email: '{email}' is already in use.");
             
